@@ -20,10 +20,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Principal <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="logica.php">index</a>
             </li>
         </ul>
     </div>
@@ -32,24 +32,26 @@
 <main>
 
     <div class="container">
+        
         <div class="row justify-content-center mt-5">
             <div class="col-4">
-                <form>
+
+                <form action="index.php" method="POST">
                     <h3 class="text-center mb-4">Factura de Compra</h3>
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Producto1">
+                            <input type="text" class="form-control" placeholder="Producto1" name="producto1">
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Precio($)">
+                            <input type="number" class="form-control" placeholder="Precio($)" name="precio1">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Producto2">
+                            <input type="text" class="form-control" placeholder="Producto2" name="producto2">
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Precio($)">
+                            <input type="number" class="form-control" placeholder="Precio($)" name="precio2">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -76,11 +78,58 @@
                             <input type="number" class="form-control" placeholder="Precio($)">
                         </div>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-block">Calcular</button>
+                    <button type="submit" class="btn btn-primary btn-block" name="botonCalcular">Calcular</button>
                 </form>
+
+              
+                
+                <?php if(isset($_POST["botonCalcular"])): ?>
+
+                
+                
+                    <h6 class="mt-5"> 
+                        <?php
+                            
+                            $precio1=$_POST["precio1"];
+                            $producto1=$_POST["producto1"];
+
+                            $precio2=$_POST["precio2"];
+                            $producto2=$_POST["producto2"];
+
+                            $total=$precio1+$precio2;
+
+                            echo("El producto 1 es: ".$producto1." -----($) ".$precio1);
+                            echo("<br>");
+                            echo("El producto 2 es: ".$producto2." -----($) ".$precio2);
+                            echo("<br>");
+                            echo("<br>");
+                            echo("******************************");
+                            echo("<br>");
+                            echo("El total de la compra fué de: ".$total);
+
+                            
+
+
+                        ?>
+                    </h6>
+               
+                
+               
+                
+
+                <?php endif ?>
+
+                
+
             </div>
         </div>
+
+
+
+
+       
+        
+
     </div>
 
 
