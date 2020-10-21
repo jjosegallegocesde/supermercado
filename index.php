@@ -80,8 +80,6 @@
                     </div>
                     <button type="submit" class="btn btn-primary btn-block" name="botonCalcular">Calcular</button>
                 </form>
-
-              
                 
                 <?php if(isset($_POST["botonCalcular"])): ?>
 
@@ -118,11 +116,13 @@
                 
 
                 <?php endif ?>
-
-                
-
             </div>
         </div>
+
+
+        
+
+      
 
 
 
