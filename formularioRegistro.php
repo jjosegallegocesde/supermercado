@@ -14,6 +14,10 @@
 
     <main>
     
+        <?php 
+            $nombre="Juan";
+        ?>
+
         <div class="container">
 
         <form class="mt-5" method="POST" action="registrarPersonas.php">
