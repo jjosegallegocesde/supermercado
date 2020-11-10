@@ -18,6 +18,7 @@
   <main>
 
     <?php 
+        
         $productos=array(
           "producto1"=>array("arroz",1600,"Diana","https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3510546-1000-1000/7702511000427.jpg?v=637273105646430000"),
           "producto2"=>array("salchichas",5000,"Zenú","https://www.zenu.com.co/wp-content/uploads/2019/07/salchicha-viena-tradicional-zenu-1200x1200.png"),
