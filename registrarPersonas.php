@@ -9,15 +9,14 @@ if(isset($_POST["boton"])){
     $nombre=$_POST["nombreUsuario"];
     $apellido=$_POST["apellidoUsuario"];
     $cedula=$_POST["cedulaUsuario"];
-    
-
+    $foto=$_POST["foto"];
     
     //2. crear un objeto(copia) de la clase BaseDatos()
     $operacionBD= new BaseDatos();
    
 
     //3.Necesito crear una consulta SQL para insertar datos
-    $consultaSQL="INSERT INTO usuarios(nombre,apellido,cedula,descripcion) VALUES ('$nombre','$apellido','$cedula','$descripcion')";
+    $consultaSQL="INSERT INTO usuarios(nombre,apellido,cedula,descripcion,foto) VALUES ('$nombre','$apellido','$cedula','$descripcion','$foto')";
 
     //4. LLamar al metodo agregarDatos() de la clase BaseDatos
     $operacionBD->agregarDatos($consultaSQL);

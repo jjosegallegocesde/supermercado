@@ -18,34 +18,39 @@
         $operacionBD=new BaseDatos();
 
         //3. Crear una consulta para BUSCAR en SQL
+
         $consultaSQL="SELECT * FROM usuarios WHERE 1";
 
         //4. Almacenar la respuesta de la consula (ejecutando la consulta)
         $usuarios=$operacionBD->consultarDatos($consultaSQL);
 
         
+        
     ?>
 
+    
     <div class="container">
     
         <div class="row row-cols-1 row-cols-md-3">
 
             <?php foreach($usuarios as $usuario):?>
-
-                <div class="col mb-4">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo($usuario["nombre"])?></h5>
-                            <p class="card-text"><?php echo($usuario["descripcion"])?></p>
+ 
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="<?php echo($usuario["foto"]) ?>" class="card-img-top" alt="foto">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo($usuario["nombre"])?></h5>
+                                <p class="card-text"><?php echo($usuario["descripcion"])?></p>
+                                <a href="eliminarPersonas.php?id=<?php echo($usuario["codigoUsuario"])?>" class="btn btn-danger">Eliminar</a>
+                            </div>
                         </div>
-                    </div>
                 </div>
-
 
             <?php endforeach?>
 
         </div>
+
+        
     
     
     </div>

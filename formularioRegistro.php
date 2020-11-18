@@ -50,12 +50,20 @@
                         <input type="number" class="form-control" placeholder="cedula" name="cedulaUsuario">
                 </div>
             </div>
+            
             <div class="row mt-3">
                     <div class="col">
                         <textarea class="form-control" rows="3" name="descripcion"></textarea>
-                   
-                </div>
+                   </div>
             </div>
+
+            <div class="row mt-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="FOTO URL" name="foto">
+                   </div>
+            </div>
+
+
             <button type="submit" class="btn btn-info btn-block mt-3" name="boton">registrar</button>
         </form>
         
